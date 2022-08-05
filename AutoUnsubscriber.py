@@ -14,7 +14,7 @@ servers = [('Gmail','imap.gmail.com'),('Outlook','imap-mail.outlook.com'),
            ('Hotmail','imap-mail.outlook.com'),('Yahoo','imap.mail.yahoo.com'),
            ('ATT','imap.mail.att.net'),('Comcast','imap.comcast.net'),
            ('Verizon','incoming.verizon.net'),('AOL','imap.aol.com'),
-           ('Zoho','imap.zoho.com'),('GMX','imap.gmx.com'),('ProtonMail','127.0.0.1')]
+           ('Zoho','imap.zoho.com'),('GMX','imap.gmx.com'),('ProtonMail','127.0.0.1')('iCloud','imap.mail.me.com')]
 #Rewrote with dictionaries
 serverD = {
     'Gmail': {
@@ -56,7 +56,11 @@ serverD = {
     'ProtonMail': {
         'imap': '127.0.0.1',
         'domains': ['@protonmail.com','@pm.me']
-    }
+        },
+    'iCloud': {
+        'imap': 'imap.mail.me.com',
+        'domains': ['@icloud.com']
+        }
 }
 
 
@@ -83,7 +87,7 @@ class AutoUnsubscriber():
     def getInfo(self):
         print('This program searchs your email for junk mail to unsubscribe from and delete')
         print('Supported emails: Gmail, Outlook, Hotmail, Yahoo, AOL, Zoho,')
-        print('GMX, AT&T, Comcast, ProtonMail (Bridge), and Verizon')
+        print('GMX, AT&T, Comcast, ProtonMail (Bridge), iCloud and Verizon')
         print('Please note: you may need to allow access to less secure apps')
         getEmail = True
         while getEmail:
