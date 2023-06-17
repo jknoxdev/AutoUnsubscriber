@@ -67,7 +67,6 @@ serverD = {
 '''Key words for unsubscribe link - add more if found'''
 words = ['unsubscribe','subscription','optout']
 
-
 class AutoUnsubscriber():
     def __init__(self):
         self.email = ''
@@ -90,7 +89,6 @@ class AutoUnsubscriber():
         print('Supported emails: Gmail, Outlook, Hotmail, Yahoo, AOL, Zoho,')
         print('GMX, AT&T, Comcast, ProtonMail (Bridge), iCloud and Verizon')
         print('Please note: you may need to allow access to less secure apps')
-        print(words)
         getEmail = True
         while getEmail:
             self.email = str.lower(input('\nEnter your email address: '))
